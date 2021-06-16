@@ -1,8 +1,8 @@
 # 長距離シグナルのイメージング実験のautomation
 ## 実験
-### マウスマクロ
+#### マウスマクロ
 
-### オートステージ
+#### オートステージ
 
 ## imageJ macro
 PLotGrayScale.ijm
