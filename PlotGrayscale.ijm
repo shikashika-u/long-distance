@@ -47,6 +47,8 @@ for (k=0; k<filelist.length; k=k+2){
 	selectWindow("Result of Result of Result of 1");
 	close();
 	ROIimagesave(k);
+	roiManager("deselect");
+	roiManager("delete");
 	moviesave(k);
 	run("Close All");
 }
@@ -80,9 +82,7 @@ function ROIimagesave(a){
 	roiManager("deselect");
 	roiManager("Set Line Width", 5);
 	roiManager("Show All");
-    Overlay.flatten
-	roiManager("deselect");
-	roiManager("delete");
+	Overlay.flatten
 	saveAs("Jpeg", ROIimagedir+"\\"+filelist[a]);
 	close();
 	selectWindow("AVG_1");
