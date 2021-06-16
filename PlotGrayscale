@@ -19,13 +19,13 @@ for (k=0; k<filelist.length; k=k+2){
 	open(opendir+"\\"+filelist[k]);
 	rename("2");
 	open(opendir+"\\"+filelist[k+1]);
-	rename("1");//ImageCalculatorとzprojectで画像処理
-	ratioimage();
+	rename("1");
+	ratioimage();//ImageCalculatorとzprojectで画像処理
 	for (i=0; i<=ROI-1; i++){
 		waitForUser("ROI selection", "ROIを選択");
 		roiManager("add");
 	}//ROIを手動で選択するとROImanagerに登録してくれる。
-	selectWindow("Result of Result of Result of 1");//登録したROI
+	selectWindow("Result of Result of Result of 1");
 	roiManager("Select", 0);
 	run("Plot Z-axis Profile");
 	Plot.getValues(x, y);
